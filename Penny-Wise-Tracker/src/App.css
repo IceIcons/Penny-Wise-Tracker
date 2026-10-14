@@ -1,0 +1,819 @@
+:root {
+  --ink: #282640;
+  --muted: #85849b;
+  --purple: #6558d3;
+  --purple-dark: #5145b5;
+  --line: #ecebf4;
+  --panel: #fff;
+}
+#root {
+  min-height: 100vh;
+}
+.app-shell {
+  min-height: 100vh;
+}
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 248px;
+  padding: 29px 20px;
+  background: #25243f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+.brand-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 8px 46px;
+}
+.brand-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: #8275f1;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 7px 18px #17162d66;
+}
+.brand-mark svg {
+  font-size: 24px;
+}
+.brand-name.MuiTypography-root {
+  font:
+    800 21px Manrope,
+    sans-serif;
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+}
+.brand-subtitle {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #a8a6c7;
+  margin-top: 4px;
+}
+.sidebar-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  color: #8584a9;
+  padding: 0 12px 13px;
+}
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 14px;
+  border-radius: 12px;
+  color: #b5b4ce;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.nav-links a svg {
+  font-size: 20px;
+}
+.nav-links a.active,
+.nav-links a:hover {
+  background: #3a385e;
+  color: white;
+}
+.nav-links a.active {
+  box-shadow: inset 3px 0 #a59bff;
+}
+.sidebar-bottom {
+  margin-top: auto;
+}
+.mini-tip {
+  padding: 16px;
+  background: #302f50;
+  border: 1px solid #45436a;
+  border-radius: 15px;
+  margin-bottom: 18px;
+}
+.tip-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: #4a4777;
+  color: #c7c0ff;
+  display: grid;
+  place-items: center;
+  margin-bottom: 13px;
+}
+.tip-icon svg {
+  font-size: 18px;
+}
+.mini-tip strong {
+  font:
+    700 13px Manrope,
+    sans-serif;
+}
+.mini-tip p {
+  font-size: 11px;
+  line-height: 1.6;
+  color: #aaa9c4;
+  margin: 7px 0 0;
+}
+.sidebar-add.MuiButton-root {
+  width: 100%;
+  padding: 12px 8px;
+  text-transform: none;
+  background: #7b6df0;
+  border-radius: 11px;
+  font-weight: 700;
+  box-shadow: none;
+}
+.sidebar-add.MuiButton-root:hover,
+.primary-action.MuiButton-root:hover {
+  background: #594cc9;
+}
+.sidebar-foot.MuiTypography-root {
+  text-align: center;
+  color: #777696;
+  font-size: 9px;
+  letter-spacing: 1.3px;
+  margin-top: 22px;
+}
+.main-area {
+  margin-left: 248px;
+  min-height: 100vh;
+}
+.page.MuiContainer-root {
+  max-width: 1440px;
+  padding: 28px 42px 54px;
+}
+.topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 34px;
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #8988a0;
+  font-size: 12px;
+  font-weight: 600;
+}
+.avatar {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #e8e4ff;
+  color: #5d50c8;
+  font-size: 11px;
+  font-weight: 800;
+}
+.page-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+.welcome-line.MuiTypography-root,
+.welcome-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  color: #8175df;
+  margin: 0 0 9px;
+}
+.welcome-line svg {
+  font-size: 15px;
+}
+.page-title.MuiTypography-root {
+  font:
+    800 clamp(27px, 3vw, 36px) Manrope,
+    sans-serif;
+  letter-spacing: -1.2px;
+  color: #282640;
+  line-height: 1.25;
+}
+.page-subtitle.MuiTypography-root {
+  font-size: 13px;
+  color: #9291a5;
+  margin-top: 9px;
+}
+.primary-action.MuiButton-root {
+  background: #6558d3;
+  border-radius: 10px;
+  padding: 12px 17px;
+  text-transform: none;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 7px 18px #6558d326;
+  white-space: nowrap;
+}
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
+.summary-card.MuiCard-root {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 5px 24px #302e5210;
+  overflow: hidden;
+  position: relative;
+}
+.summary-card.MuiCard-root:after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  right: -32px;
+  bottom: -38px;
+  background: currentColor;
+  opacity: 0.045;
+}
+.summary-card .MuiCardContent-root {
+  padding: 21px 22px 23px;
+}
+.summary-card .MuiCardContent-root:last-child {
+  padding-bottom: 23px;
+}
+.summary-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 19px;
+}
+.summary-icon {
+  width: 39px;
+  height: 39px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  background: #eeeaff;
+  color: #675bd3;
+}
+.summary-icon svg {
+  font-size: 21px;
+}
+.summary-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #bcb7e9;
+}
+.summary-label.MuiTypography-root {
+  font-size: 12px;
+  color: #87869d;
+  font-weight: 600;
+}
+.summary-amount.MuiTypography-root {
+  font:
+    800 clamp(23px, 2.4vw, 30px) Manrope,
+    sans-serif;
+  letter-spacing: -1px;
+  margin-top: 7px;
+  color: #282640;
+  overflow-wrap: anywhere;
+}
+.summary-note.MuiTypography-root {
+  font-size: 10px;
+  color: #a09fb0;
+  margin-top: 8px;
+}
+.summary-card.income .summary-icon {
+  background: #e0f8ee;
+  color: #1c9d70;
+}
+.summary-card.income .summary-dot {
+  background: #65d3ac;
+}
+.summary-card.expense .summary-icon {
+  background: #ffebe8;
+  color: #e47768;
+}
+.summary-card.expense .summary-dot {
+  background: #f2a69b;
+}
+.insight-banner {
+  margin-top: 23px;
+  background: #eeecff;
+  border: 1px solid #e5e1ff;
+  border-radius: 16px;
+  padding: 17px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.insight-symbol {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: #dcd6ff;
+  color: #6558d3;
+  flex-shrink: 0;
+}
+.insight-symbol span {
+  font-size: 25px;
+}
+.insight-banner strong {
+  font:
+    700 13px Manrope,
+    sans-serif;
+  color: #37325e;
+}
+.insight-banner p {
+  font-size: 11px;
+  color: #777393;
+  margin: 5px 0 0;
+  line-height: 1.5;
+}
+.insight-banner a {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  color: #5d50c8;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.transactions {
+  margin-top: 35px;
+}
+.list-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 17px;
+}
+.section-title.MuiTypography-root {
+  font:
+    800 19px Manrope,
+    sans-serif;
+  letter-spacing: -0.5px;
+  color: #282640;
+}
+.section-subtitle.MuiTypography-root {
+  font-size: 11px;
+  color: #9695a8;
+  margin-top: 5px;
+}
+.transaction-filters {
+  display: flex;
+  gap: 9px;
+}
+.transaction-filters .MuiOutlinedInput-root {
+  background: white;
+  border-radius: 10px;
+  font-size: 12px;
+}
+.transaction-filters .MuiInputBase-input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.transaction-filters .MuiInputBase-root fieldset {
+  border-color: #e9e8f2;
+}
+.transaction-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.transaction-card.MuiCard-root {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #eeedf5;
+  box-shadow: 0 3px 12px #302e5208;
+  transition:
+    transform 0.18s,
+    border-color 0.18s;
+}
+.transaction-card.MuiCard-root:hover {
+  border-color: #d9d4ff;
+}
+.transaction-icon {
+  width: 43px;
+  height: 43px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  background: #eeebff;
+  color: #6659d2;
+}
+.transaction-icon.income {
+  background: #e3f8ef;
+  color: #21976d;
+}
+.transaction-icon.expense {
+  background: #fff0ed;
+  color: #d97768;
+}
+.transaction-icon svg {
+  font-size: 21px;
+}
+.transaction-info {
+  min-width: 0;
+  flex: 1;
+}
+.transaction-name.MuiTypography-root {
+  font-size: 13px;
+  font-weight: 700;
+  color: #302f49;
+  overflow-wrap: anywhere;
+}
+.transaction-meta.MuiTypography-root {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  font-size: 10px;
+  color: #9695a8;
+  margin-top: 5px;
+}
+.transaction-meta span {
+  color: #cbc9d9;
+}
+.transaction-right {
+  text-align: right;
+  min-width: 112px;
+}
+.transaction-amount.MuiTypography-root {
+  font:
+    800 14px Manrope,
+    sans-serif;
+  letter-spacing: -0.2px;
+}
+.transaction-amount.income {
+  color: #19966b;
+}
+.transaction-amount.expense {
+  color: #d66d60;
+}
+.transaction-kind.MuiTypography-root {
+  font-size: 8px;
+  letter-spacing: 1.1px;
+  color: #a5a3b6;
+  margin-top: 4px;
+  font-weight: 700;
+}
+.delete-button.MuiIconButton-root {
+  color: #b1afc1;
+  width: 33px;
+  height: 33px;
+  margin-left: 3px;
+}
+.delete-button.MuiIconButton-root:hover {
+  background: #fff0ee;
+  color: #d66d60;
+}
+.view-all {
+  display: flex;
+  justify-content: center;
+  margin-top: 19px;
+}
+.view-all .MuiButton-root {
+  color: #6256cd;
+  text-transform: none;
+  font-weight: 700;
+  font-size: 12px;
+}
+.empty-state {
+  border: 1px dashed #d9d6ea;
+  border-radius: 17px;
+  text-align: center;
+  padding: 45px 15px;
+  background: #fff;
+}
+.empty-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  background: #efedff;
+  color: #7569da;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 14px;
+}
+.empty-state strong {
+  font:
+    700 14px Manrope,
+    sans-serif;
+}
+.empty-state p {
+  font-size: 12px;
+  color: #9695a8;
+  margin: 7px 0 0;
+}
+.transactions-page > .transactions-title-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 14px;
+  background: #e8e4ff;
+  color: #6256cd;
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+}
+.transactions-page > .transactions-title-icon svg {
+  font-size: 24px;
+}
+.transactions-page > .transactions {
+  margin-top: 34px;
+}
+.transaction-dialog.MuiPaper-root,
+.delete-dialog.MuiPaper-root {
+  border-radius: 20px;
+  padding: 5px;
+}
+.dialog-heading.MuiDialogTitle-root {
+  font:
+    800 24px Manrope,
+    sans-serif;
+  color: #292742;
+  padding: 25px 27px 7px;
+  letter-spacing: -0.5px;
+}
+.dialog-kicker {
+  font:
+    800 9px "DM Sans",
+    sans-serif;
+  letter-spacing: 1.7px;
+  color: #8074dd;
+}
+.dialog-description {
+  font-size: 12px;
+  color: #8b899f;
+  margin: 0 0 20px;
+}
+.expense-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding-top: 0;
+}
+.expense-form .MuiOutlinedInput-root {
+  border-radius: 10px;
+  font-size: 13px;
+}
+.expense-form .MuiInputLabel-root {
+  font-size: 13px;
+}
+.dialog-actions.MuiDialogActions-root {
+  padding: 0 24px 23px;
+  gap: 9px;
+}
+.dialog-actions .MuiButton-root,
+.delete-actions .MuiButton-root {
+  border-radius: 9px;
+  text-transform: none;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 9px 15px;
+}
+.dialog-actions .MuiButton-contained {
+  background: #6558d3;
+}
+.delete-dialog-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 17px 0;
+}
+.warning-mark {
+  width: 43px;
+  height: 43px;
+  border-radius: 14px;
+  background: #fff0ed;
+  color: #d85f54;
+  display: grid;
+  place-items: center;
+}
+.delete-title.MuiDialogTitle-root {
+  font:
+    800 21px Manrope,
+    sans-serif;
+  letter-spacing: -0.6px;
+  padding: 12px 23px 5px;
+}
+.delete-copy.MuiTypography-root {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #858399;
+}
+.delete-copy strong {
+  color: #33314c;
+}
+.delete-actions.MuiDialogActions-root {
+  padding: 12px 22px 23px;
+  gap: 8px;
+}
+.delete-actions .MuiButton-containedError {
+  background: #d85f54;
+  box-shadow: none;
+}
+.delete-actions .MuiButton-outlined {
+  border-color: #e3e1ed;
+  color: #77758b;
+}
+@media (max-width: 1100px) {
+  .sidebar {
+    width: 215px;
+    padding: 24px 15px;
+  }
+  .main-area {
+    margin-left: 215px;
+  }
+  .page.MuiContainer-root {
+    padding: 26px 25px 45px;
+  }
+  .summary-grid {
+    gap: 11px;
+  }
+  .summary-card .MuiCardContent-root {
+    padding: 18px;
+  }
+  .transaction-card.MuiCard-root {
+    gap: 10px;
+  }
+}
+@media (max-width: 760px) {
+  .sidebar {
+    position: static;
+    width: auto;
+    padding: 15px 18px;
+    display: block;
+  }
+  .brand-row {
+    padding: 0 2px 17px;
+  }
+  .sidebar-label,
+  .sidebar-bottom {
+    display: none;
+  }
+  .nav-links {
+    flex-direction: row;
+  }
+  .nav-links a {
+    flex: 1;
+    justify-content: center;
+    padding: 10px 7px;
+    font-size: 12px;
+  }
+  .main-area {
+    margin-left: 0;
+  }
+  .page.MuiContainer-root {
+    padding: 23px 17px 38px;
+  }
+  .topline {
+    margin-bottom: 26px;
+  }
+  .page-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .primary-action.MuiButton-root {
+    width: 100%;
+    justify-content: center;
+  }
+  .summary-grid {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+  .summary-card .MuiCardContent-root {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    column-gap: 13px;
+    align-items: center;
+    padding: 14px 16px;
+  }
+  .summary-card .MuiCardContent-root:last-child {
+    padding-bottom: 14px;
+  }
+  .summary-card-top {
+    grid-row: 1/4;
+    margin: 0;
+  }
+  .summary-label.MuiTypography-root {
+    align-self: end;
+  }
+  .summary-amount.MuiTypography-root {
+    font-size: 24px;
+    margin-top: 2px;
+  }
+  .summary-note.MuiTypography-root {
+    margin-top: 2px;
+  }
+  .summary-dot {
+    display: none;
+  }
+  .insight-banner {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .insight-banner a {
+    margin-left: 54px;
+  }
+  .list-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .transaction-filters {
+    width: 100%;
+  }
+  .transaction-filters > * {
+    min-width: 0;
+    flex: 1;
+  }
+  .transaction-card.MuiCard-root {
+    padding: 11px;
+    gap: 9px;
+  }
+  .transaction-icon {
+    width: 37px;
+    height: 37px;
+  }
+  .transaction-right {
+    min-width: 91px;
+  }
+  .transaction-amount.MuiTypography-root {
+    font-size: 12px;
+  }
+  .delete-button.MuiIconButton-root {
+    width: 29px;
+    height: 29px;
+    margin-left: 0;
+  }
+  .expense-form {
+    grid-template-columns: 1fr;
+  }
+  .dialog-heading.MuiDialogTitle-root {
+    font-size: 22px;
+  }
+  .transactions-page > .transactions-title-icon {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 390px) {
+  .transaction-meta.MuiTypography-root {
+    font-size: 9px;
+    gap: 4px;
+  }
+  .transaction-right {
+    min-width: 77px;
+  }
+  .transaction-card.MuiCard-root {
+    gap: 7px;
+  }
+  .transaction-name.MuiTypography-root {
+    font-size: 12px;
+  }
+  .transaction-amount.MuiTypography-root {
+    font-size: 11px;
+  }
+  .transaction-filters {
+    flex-direction: column;
+  }
+}
+
+/* Added for expense breakdown and date-grouped activity */
+.expense-chart {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  align-items: center;
+  gap: 28px;
+  margin-top: 28px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.chart-legend { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 20px; margin-top: 18px; }
+.chart-legend-item { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--ink); }
+.chart-legend-item strong { margin-left: auto; }
+.date-group-heading { padding: 12px 3px 3px; color: #777393; font-size: 12px; font-weight: 800; }
+.transaction-filters { flex-wrap: wrap; }
+@media (max-width: 760px) {
+  .expense-chart { grid-template-columns: 1fr; }
+  .chart-legend { grid-template-columns: 1fr; }
+}
